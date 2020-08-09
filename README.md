@@ -15,6 +15,10 @@ https://streamable.com/gjur20
 - [skinchanger](https://github.com/esx-framework/skinchanger)
 - [mythic_progbar](https://github.com/HalCroves/mythic_progbar)
 
+### Manually
+- Download https://github.com/VictorNJ21/esx_checkin/archive/master.zip
+- Put it in the ```[esx]``` directory
+
 ## Installation
 - Import ```en_esx_checkin.sql``` to your database
 - Add this in your ```server.cfg```:
