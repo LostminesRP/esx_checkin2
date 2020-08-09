@@ -24,6 +24,7 @@ Locales['en'] = {
     ['policebadge_subject'] = 'State of Los Santos',
     ['policebadge_job'] = '~b~Job~w~: ',
     ['policebadge_job_grade'] = '\n~b~Job Grade~w~: ',
+    ['gave_policebadge'] = 'You showed your policebadge.',
     -- No One nearby
     ['no_one_nearby'] = 'No player(s) nearby!',
 }
