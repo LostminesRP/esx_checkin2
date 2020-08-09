@@ -9,8 +9,8 @@ Citizen.CreateThread(function()
 		TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 		Citizen.Wait(0)
 	end
-    while ESX.GetPlayerData() == nil do
-        Citizen.Wait(10)
+    	while ESX.GetPlayerData() == nil do
+        	Citizen.Wait(10)
 	end
 	PlayerData = ESX.GetPlayerData()
 end)
