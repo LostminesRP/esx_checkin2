@@ -63,7 +63,8 @@ RegisterNetEvent('esx_checkin:showBadge')
 AddEventHandler('esx_checkin:showBadge', function(closestPlayer, closestPlayerDistance)
 	local closestPlayer, closestPlayerDistance = ESX.Game.GetClosestPlayer()
 	if closestPlayer ~= -1 and closestDistance <= 3.0 then
-		notification()
+		notification2()
+		ESX.ShowNotification(_U('gave_policebadge'))
 	else
 		ESX.ShowNotification(_U('no_one_nearby'))
 	end
@@ -231,12 +232,23 @@ function playAnim(animDict, animName, duration)
 end
 
 -- Policebadge function
-function notification(msg)
+function notification()
 	local mugshot, mugshotStr = ESX.Game.GetPedMugshot(PlayerPedId())
 	local job = PlayerData.job.label
 	local job_grade = PlayerData.job.grade
 	playAnim('amb@world_human_seat_wall_tablet@female@base', 'base', -1)
 	Citizen.Wait(1000)
     ESX.ShowAdvancedNotification(_U('policebadge_title'), _U('policebadge_subject'), _U('policebadge_job') .. job .. _U('policebadge_job_grade') .. job_grade, mugshotStr, 2)
+    UnregisterPedheadshot(mugshot)
+end
+
+function notification2()
+	local mugshot, mugshotStr = ESX.Game.GetPedMugshot(PlayerPedId())
+	local closestPlayer = ESX.Game.GetClosestPlayer()
+	local job = PlayerData.job.label
+	local job_grade = PlayerData.job.grade
+	playAnim('mp_common', 'givetake1_a', 2500)
+	Citizen.Wait(2500)
+    ESX.ShowAdvancedNotification(closestPlayer, _U('policebadge_title'), _U('policebadge_subject'), _U('policebadge_job') .. job .. _U('policebadge_job_grade') .. job_grade, mugshotStr, 2)
     UnregisterPedheadshot(mugshot)
 end
