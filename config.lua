@@ -4,7 +4,7 @@ Config.Locale       = 'en'
 
 -- Optimization
 Config.DrawDistance = 5 -- Keep this as low as possible for better optimization, 5 is recommended
-Config.Optimization = 5 -- Keep this between 3-6, 4-5 is recommended, DON'T go over 6
+Config.Optimization = 4 -- Keep this between 3-6, 4-5 is recommended, DON'T go over 6
 
 Config.Location     = vector3(441.33, -981.12, 30.79) -- Check in location
 
