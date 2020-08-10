@@ -22,8 +22,8 @@ Locales['es'] = {
     -- Policebadge
     ['policebadge_title'] = 'Oficial de policia',
     ['policebadge_subject'] = 'Estado de Los Santos',
-    ['policebadge_job'] = '~b~Job~w~: ',
-    ['policebadge_job_grade'] = '\n~b~Job Grade~w~: ',
+    ['policebadge_job'] = '~b~Trabajo~w~: ',
+    ['policebadge_job_grade'] = '\n~b~Grado Laboral~w~: ',
     ['gave_policebadge'] = 'Mostraste tu placa de policia',
     -- No One nearby
     ['no_one_nearby'] = 'Ningun jugador cerca.',
