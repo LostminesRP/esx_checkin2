@@ -4,6 +4,8 @@ esx_checkin allows police officers to check on/off duty, when you check in, you 
 
 I would kindly ask you to report any bug/suggestion down below.
 
+# Show Badge may not work, I haven't got the time to test it out yet. If it doesn't work, tell me down below and I will fix it.
+
 ## Demonstration
 https://streamable.com/gjur20
 
