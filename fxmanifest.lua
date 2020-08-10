@@ -7,6 +7,7 @@ description 'ESX Checkin'
 server_scripts {
 	'@es_extended/locale.lua',
 	'locales/en.lua',
+	'locales/es.lua',
 	'locales/no.lua',
 	'config.lua',
 	'server/main.lua'
@@ -15,6 +16,7 @@ server_scripts {
 client_scripts {
 	'@es_extended/locale.lua',
 	'locales/en.lua',
+	'locales/es.lua',
 	'locales/no.lua',
 	'config.lua',
 	'client/main.lua'
@@ -27,6 +29,3 @@ dependencies {
 	'skinchanger',
 	'mythic_progbar'
 }
-
-
-
