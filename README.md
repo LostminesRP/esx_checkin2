@@ -29,3 +29,5 @@ https://streamable.com/gjur20
 ```
 start esx_checkin
 ```
+
+## Feel free to change or reupload the script, but never claim it's yours.
