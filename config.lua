@@ -1,18 +1,20 @@
 Config              = {}
 
-Config.Locale       = 'en'
+Config.Locale       = 'fi'
 
 -- Optimization
 Config.DrawDistance = 5 -- Keep this as low as possible for better optimization, 5 is recommended
 Config.Optimization = 4 -- Keep this between 3-6, 4-5 is recommended, DON'T go over 6
 
-Config.Location     = vector3(441.33, -981.12, 30.79) -- Check in location
+Config.Location     = vector3(441.33, -981.12, 30.79) 
+Config.Location2    = vector3(-449.13, 6012.5, 31.72)  -- Check in location
+Config.Location3    = vector3(1844.56, 3691.86, 34.26)
 
 Config.ChangeJob    = true 
 Config.GiveArmor    = true 
 Config.UseUniforms  = true 
-Config.GiveWeapons  = true
-Config.NotifyChat   = true
+Config.GiveWeapons  = false
+Config.NotifyChat   = false
 
 Config.CheckInTime  = 10000 -- 10 sec.
 

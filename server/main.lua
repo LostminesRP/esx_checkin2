@@ -7,7 +7,7 @@ RegisterServerEvent('esx_checkin:justCheckedIn')
 AddEventHandler('esx_checkin:justCheckedIn', function()
 	local _source = source
     local xPlayer = ESX.GetPlayerFromId(_source)  
-    if xPlayer.canCarryItem('policebadge', 1) then
+    if true then
         TriggerClientEvent('esx_checkin:haveSpace', source)
         xPlayer.addInventoryItem('policebadge', 1)
         if Config.GiveWeapons then
@@ -26,7 +26,7 @@ AddEventHandler('esx_checkin:justCheckedIn', function()
                 args = {_U('police_in') .. xPlayer.getName() .. _U('police2_in')} 
             })
         end
-        xPlayer.showNotification(_U('just_checked_in'))
+        --xPlayer.showNotification(_U('just_checked_in'))
     else
         xPlayer.showNotification(_U('no_space'))
     end
@@ -54,12 +54,30 @@ AddEventHandler('esx_checkin:justCheckedOut', function()
             args = {_U('police_out') .. xPlayer.getName() .. _U('police2_out')} 
         })
     end
-    xPlayer.showNotification(_U('just_checked_out'))
+    --xPlayer.showNotification(_U('just_checked_out'))
 end)
 
 -- Make the policebadge usable
 ESX.RegisterUsableItem('policebadge', function(source)
     local _source = source
     local xPlayer = ESX.GetPlayerFromId(_source) 
+    if xPlayer.job.name == 'police' then
     TriggerClientEvent('esx_checkin:openBadgeMenu', source)
+end
 end)
+
+
+RegisterServerEvent('esx_checkin:notify')
+AddEventHandler('esx_checkin:notify', function(target, job, job_grade, mugshotStr)
+    local xPlayer = ESX.GetPlayerFromId(source)
+    local tyo = xPlayer.getJob()
+    local tyonnimi = xPlayer.job.label
+    local tyontaso = xPlayer.job.grade_label
+    local kuva =  mugshotStr
+
+    TriggerClientEvent('esx_checkin:vittusaatana', target, tyonnimi, tyontaso, kuva)
+    
+
+--ESX.ShowAdvancedNotification(   mugshotStr)
+    end
+)
